@@ -2,6 +2,7 @@ nextjs-serverless-test:
   component: "@sls-next/serverless-component"
   inputs:
     bucketName: nextjs-serverless-s3
+    roleArn: arn:aws:iam::226881276779:role/nextjs-serverless-lambda-role # Lambda@Edge role 설정
     description: "*lambda-type*@Edge for nextjs-serverless-test" # Lambda@Edge 설명 설정
     name:
       defaultLambda: nextjs-serverless-lambda #Default Lambda의 이름 설정
