@@ -1,0 +1,11 @@
+dev-nextjs-serverless-test:
+  component: "@sls-next/serverless-component"
+  inputs:
+    roleArn: arn:aws:iam::226881276779:role/nextjs-serverless-lambda-role # Lambda@Edge role 설정
+    description: "*lambda-type*@Edge for dev-nextjs-serverless-test" # Lambda@Edge 설명 설정
+    name:
+      defaultLambda: dev-nextjs-serverless-lambda #Default Lambda의 이름 설정
+      apiLambda: dev-nextjs-serverless-lambda # Image Lambda의 이름 설정
+    publicDirectoryCache: false
+    # cloudfront:
+    #   distributionId: "E3SNQ8F9Z6ZZ6D"
