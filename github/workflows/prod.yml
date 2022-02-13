@@ -36,10 +36,10 @@ jobs:
         run: npx serverless --component=serverless-next config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       # - name: Download `.serverless` state from S3
-      #   run: aws s3 sync s3://nextjs-starter-serverless-state-bucket/nextjs-starter/prod/.serverless .serverless --delete
+      #   run: aws s3 sync s3://nextjs-serverless-test-state-bucket/nextjs-starter/prod/.serverless .serverless --delete
 
       - name: Deploy to AWS
         run: npm run deploy
 
       - name: Upload `.serverless` state to S3
-        run: aws s3 sync .serverless s3://nextjs-starter-serverless-state-bucket/nextjs-starter/prod/.serverless --delete
+        run: aws s3 sync .serverless s3://nextjs-serverless-test-state-bucket/nextjs-starter/prod/.serverless --delete
