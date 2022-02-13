@@ -1,0 +1,11 @@
+nextjs-serverless-test:
+  component: "@sls-next/serverless-component"
+  inputs:
+    bucketName: nextjs-serverless-s3
+    description: "*lambda-type*@Edge for nextjs-serverless-test" # Lambda@Edge 설명 설정
+    name:
+      defaultLambda: nextjs-serverless-lambda #Default Lambda의 이름 설정
+      apiLambda: nextjs-serverless-lambda # Image Lambda의 이름 설정
+    publicDirectoryCache: true
+    cloudfront:
+      distributionId: "E3SNQ8F9Z6ZZ6D"
